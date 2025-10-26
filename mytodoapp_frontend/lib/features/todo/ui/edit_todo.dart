@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mytodoapp_frontend/contants/colors.dart';
 
-class AddTodo extends StatefulWidget {
-  const AddTodo({super.key});
+class EditTodo extends StatefulWidget {
+  const EditTodo({super.key});
 
   @override
-  State<AddTodo> createState() => _AddTodoState();
+  State<EditTodo> createState() => _EditTodoState();
 }
 
-class _AddTodoState extends State<AddTodo> {
+class _EditTodoState extends State<EditTodo> {
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _discriptionController = TextEditingController();
   @override
@@ -21,7 +21,7 @@ class _AddTodoState extends State<AddTodo> {
         toolbarHeight: 120,
         centerTitle: true,       // Appbar Text"Add task" in screen center
         title: Text(
-          'Add Task',
+          'Edit Task',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w600,
@@ -159,7 +159,7 @@ class _AddTodoState extends State<AddTodo> {
                       ),
                       child: Center(
                         child: Text(
-                          'Create Task',
+                          'Save Task',
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Poppins',
