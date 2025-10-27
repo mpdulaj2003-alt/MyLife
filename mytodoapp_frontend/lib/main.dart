@@ -1,9 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mytodoapp_frontend/features/authentication/ui/loginScreen.dart';
+import 'package:mytodoapp_frontend/firebase_options.dart';
+import 'package:mytodoapp_frontend/splash_screen.dart';
 
 
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();        // Firebase Initialized
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -34,7 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Loginscreen(),
+      home: SplashScreen(),
     );
   }
 }
